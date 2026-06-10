@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git & GitHub Learning Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Git & GitHub Learning Hub</h1>
+            <p class="subtitle">Interactive guide to Git and GitHub concepts</p>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="basics">Git Basics</button>
+            <button class="tab-btn" data-tab="commands">Commands</button>
+            <button class="tab-btn" data-tab="workflow">Workflow</button>
+            <button class="tab-btn" data-tab="simulator">Simulator</button>
+        </nav>
+
+        <main>
+            <!-- Git Basics Tab -->
+            <section id="basics" class="tab-content active">
+                <h2>What is Git?</h2>
+                <div class="info-card">
+                    <h3>🔧 Version Control System</h3>
+                    <p>Git is a distributed version control system that tracks changes in your code. It allows multiple developers to work on the same project simultaneously.</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>🌍 Distributed</h3>
+                    <p>Every developer has a complete copy of the repository, making it resilient and allowing offline work.</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>📦 GitHub</h3>
+                    <p>GitHub is a cloud-based hosting service for Git repositories. It's where you store and collaborate on your code.</p>
+                </div>
+
+                <div class="key-concepts">
+                    <h3>Key Concepts:</h3>
+                    <ul>
+                        <li><strong>Repository (Repo):</strong> A folder that contains your project and its history</li>
+                        <li><strong>Commit:</strong> A snapshot of your project at a specific point in time</li>
+                        <li><strong>Branch:</strong> A parallel version of your code</li>
+                        <li><strong>Push:</strong> Upload your commits to a remote repository</li>
+                        <li><strong>Pull:</strong> Download commits from a remote repository</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Commands Tab -->
+            <section id="commands" class="tab-content">
+                <h2>Essential Git Commands</h2>
+                
+                <div class="command-card">
+                    <h3>git init</h3>
+                    <p class="description">Initialize a new Git repository</p>
+                    <code>$ git init</code>
+                </div>
+
+                <div class="command-card">
+                    <h3>git clone</h3>
+                    <p class="description">Clone a remote repository to your local machine</p>
+                    <code>$ git clone &lt;repository-url&gt;</code>
+                </div>
+
+                <div class="command-card">
+                    <h3>git add</h3>
+                    <p class="description">Stage changes for commit</p>
+                    <code>$ git add &lt;file&gt; or git add .</code>
+                </div>
+
+                <div class="command-card">
+                    <h3>git commit</h3>
+                    <p class="description">Save staged changes with a message</p>
+                    <code>$ git commit -m "Your message"</code>
+                </div>
+
+                <div class="command-card">
+                    <h3>git push</h3>
+                    <p class="description">Upload commits to remote repository</p>
+                    <code>$ git push origin &lt;branch-name&gt;</code>
+                </div>
+
+                <div class="command-card">
+                    <h3>git pull</h3>
+                    <p class="description">Download commits from remote repository</p>
+                    <code>$ git pull origin &lt;branch-name&gt;</code>
+                </div>
+
+                <div class="command-card">
+                    <h3>git branch</h3>
+                    <p class="description">Create, list, or delete branches</p>
+                    <code>$ git branch &lt;branch-name&gt;</code>
+                </div>
+
+                <div class="command-card">
+                    <h3>git checkout</h3>
+                    <p class="description">Switch between branches</p>
+                    <code>$ git checkout &lt;branch-name&gt;</code>
+                </div>
+
+                <div class="command-card">
+                    <h3>git merge</h3>
+                    <p class="description">Merge one branch into another</p>
+                    <code>$ git merge &lt;branch-name&gt;</code>
+                </div>
+
+                <div class="command-card">
+                    <h3>git log</h3>
+                    <p class="description">View commit history</p>
+                    <code>$ git log</code>
+                </div>
+            </section>
+
+            <!-- Workflow Tab -->
+            <section id="workflow" class="tab-content">
+                <h2>Git Workflow</h2>
+                <div class="workflow-container">
+                    <div class="workflow-step">
+                        <div class="step-number">1</div>
+                        <h3>Create/Clone Repo</h3>
+                        <p>Initialize a new repository or clone an existing one</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="workflow-step">
+                        <div class="step-number">2</div>
+                        <h3>Create a Branch</h3>
+                        <p>Create a new branch for your feature</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="workflow-step">
+                        <div class="step-number">3</div>
+                        <h3>Make Changes</h3>
+                        <p>Edit and modify your files</p>
+                    </div>
+                </div>
+
+                <div class="workflow-container">
+                    <div class="workflow-step">
+                        <div class="step-number">4</div>
+                        <h3>Add & Commit</h3>
+                        <p>Stage and commit your changes</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="workflow-step">
+                        <div class="step-number">5</div>
+                        <h3>Push to Remote</h3>
+                        <p>Upload to GitHub</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="workflow-step">
+                        <div class="step-number">6</div>
+                        <h3>Pull Request</h3>
+                        <p>Create a PR for code review</p>
+                    </div>
+                </div>
+
+                <div class="workflow-container">
+                    <div class="workflow-step">
+                        <div class="step-number">7</div>
+                        <h3>Merge</h3>
+                        <p>Merge PR to main branch</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="workflow-step">
+                        <div class="step-number">8</div>
+                        <h3>Delete Branch</h3>
+                        <p>Clean up your feature branch</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Git Simulator Tab -->
+            <section id="simulator" class="tab-content">
+                <h2>Interactive Git </h2>
+                
+                <div class="simulator-section">
+                    <h3>Branch Manager</h3>
+                    <div class="input-group">
+                        <input type="text" id="branchName" placeholder="Enter branch name" class="input-field">
+                        <button id="createBranchBtn" class="btn btn-primary">Create Branch</button>
+                    </div>
+                    <div id="branchList" class="branch-list">
+                        <div class="branch-item active">main</div>
+                    </div>
+                </div>
+
+                <div class="simulator-section">
+                    <h3>Commit Simulator</h3>
+                    <div class="input-group">
+                        <input type="text" id="commitMessage" placeholder="Enter commit message" class="input-field">
+                        <button id="commitBtn" class="btn btn-success">Commit</button>
+                    </div>
+                    <div id="commitHistory" class="commit-history">
+                        <div class="commit-item">Initial commit</div>
+                    </div>
+                </div>
+
+                <div class="simulator-section">
+                    <h3>Repository Status</h3>
+                    <div id="repoStatus" class="repo-status">
+                        <p><strong>Branches:</strong> <span id="branchCount">1</span></p>
+                        <p><strong>Commits:</strong> <span id="commitCount">1</span></p>
+                        <p><strong>Current Branch:</strong> <span id="currentBranch">main</span></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Git & GitHub Learning Hub | Learn Version Control</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
